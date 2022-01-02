@@ -1,0 +1,87 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.App__carousel {
+  height: calc(100vh - 40vh);
+  flex-shrink: 0;
+}
+
+.App__controls {
+  flex-shrink: 0;
+  height: 40vh;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  padding: 5px ;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.App__label {
+  padding: 10px 4px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.App__label:hover {
+  background: #fafafa;
+}
+.App__label > span {
+  font-size: 16px;
+  font-weight: 400;
+
+}
+
+.App__label input {
+  width: auto;
+  font-size: 16px;
+}
+
+.slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  color: #fff;
+}
+
+.slide:nth-child(6n+1) {
+  background: #f44336;
+}
+.slide:nth-child(6n+2) {
+  background: #e91e63;
+}
+.slide:nth-child(6n+3) {
+  background: #9c27b0;
+}
+.slide:nth-child(6n+4) {
+  background: #673ab7;
+}
+.slide:nth-child(6n+5) {
+  background: #3f51b5;
+}
+.slide:nth-child(6n+6) {
+  background: #2196f3;
+}
+
+@media (min-width: 720px) {
+  .App {
+    flex-direction: row;
+  }
+  .App__carousel {
+    height: 100%;
+    width: calc(100vw - 320px);
+  }
+  .App__controls {
+    width: 320px;
+    height: 100%;
+  }
+}
